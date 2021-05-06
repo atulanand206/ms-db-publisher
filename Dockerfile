@@ -12,4 +12,4 @@ RUN go mod download
 RUN go mod vendor
 RUN go mod verify
 RUN go build
-CMD [ "go", "./ms-db-publisher" ]
+CMD [ "go", "run", "main.go" ]
