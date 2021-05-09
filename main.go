@@ -19,7 +19,7 @@ type (
 		Name     string `json:"name" bson:"name"`
 		Rating   int    `json:"rating" bson:"rating"`
 	}
-	
+
 	Config struct {
 		Row   int    `json:"row" bson:"row, omitempty"`
 		Col   int    `json:"col" bson:"col, omitempty"`
@@ -33,6 +33,7 @@ type (
 	}
 
 	Game struct {
+		Player   User    `json:"player" bson:"player, omitempty"`
 		Conf     Config  `json:"config" bson:"config, omitempty"`
 		Times    []Range `json:"times" bson:"times, omitempty"`
 		Score    int     `json:"score" bson:"score, omitempty"`
