@@ -36,9 +36,8 @@ type (
 )
 
 func main() {
-	if err := godotenv.Load(); err != nil {
-		log.Print("No .env file found")
-	}
+	godotenv.Load()
+
 	mongoClientId := os.Getenv("MONGO_CLIENT_ID")
 	database := os.Getenv("DATABASE")
 	collection := os.Getenv("MONGO_COLLECTION")
