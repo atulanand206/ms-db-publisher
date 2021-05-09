@@ -14,6 +14,12 @@ import (
 )
 
 type (
+	User struct {
+		Username string `json:"username" bson:"username"`
+		Name     string `json:"name" bson:"name"`
+		Rating   int    `json:"rating" bson:"rating"`
+	}
+	
 	Config struct {
 		Row   int    `json:"row" bson:"row, omitempty"`
 		Col   int    `json:"col" bson:"col, omitempty"`
