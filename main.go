@@ -28,25 +28,20 @@ func main() {
 
 	kafka.LoadConsumer(kafkaBrokerId, kafkaTopic)
 	kafka.Read(func(val string) {
-		game := objects.Game{}
-		json.Unmarshal([]byte(val), &game)
-		fmt.Println(game)
+		r := &objects.Request{}
+		json.Unmarshal([]byte(val), &r)
+		var game = r.Match
 		document, _ := document(&game)
-		response := mongo.Write(database, collection, *document)
-		fmt.Println(response)
-		user, err := routes.GetUser(game.Player.Username)
+		mongo.Write(database, collection, *document)
+		user, err := routes.GetUser(game.Player.Username, r.Token)
 		if err != nil {
-			fmt.Println(err)
 			return
 		}
-		fmt.Println(user)
 		var userRequest objects.UserRequest
 		userRequest.Username = user.Username
 		userRequest.Name = user.Name
 		userRequest.Rating = user.Rating + game.Score
-		fmt.Println(userRequest)
-		res, err := routes.UpdateUser(user.Id, userRequest)
-		fmt.Println(res)
+		_, err = routes.UpdateUser(user.Id, userRequest, r.Token)
 		if err != nil {
 			fmt.Println(err)
 			return

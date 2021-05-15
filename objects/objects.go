@@ -36,4 +36,9 @@ type (
 		Won      bool    `json:"won" bson:"won, omitempty"`
 		Finished bool    `json:"finished" bson:"finished, omitempty"`
 	}
+
+	Request struct {
+		Match Game
+		Token string
+	}
 )
