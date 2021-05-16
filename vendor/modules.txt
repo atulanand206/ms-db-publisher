@@ -1,7 +1,7 @@
-# github.com/atulanand206/go-kafka v0.0.1
+# github.com/atulanand206/go-kafka v0.0.3
 ## explicit
 github.com/atulanand206/go-kafka
-# github.com/atulanand206/go-mongo v0.0.1
+# github.com/atulanand206/go-mongo v0.0.5
 ## explicit
 github.com/atulanand206/go-mongo
 # github.com/atulanand206/go-network v0.0.7
@@ -88,7 +88,6 @@ github.com/xdg-go/stringprep
 # github.com/youmark/pkcs8 v0.0.0-20181117223130-1be2e3e5546d
 github.com/youmark/pkcs8
 # go.mongodb.org/mongo-driver v1.5.1
-## explicit
 go.mongodb.org/mongo-driver/bson
 go.mongodb.org/mongo-driver/bson/bsoncodec
 go.mongodb.org/mongo-driver/bson/bsonoptions
