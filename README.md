@@ -43,8 +43,8 @@ go run main.go
 ```
 Or the following to build the docker container.
 ```
-docker build -t minesweeper .
-docker run -it minesweeper
+docker build -t publisher .
+docker run -it publisher
 ```
 
 Ensure that the `go.sum` and `vendor/modules.txt` do not have it's content altered unless there is a dependency alteration.
