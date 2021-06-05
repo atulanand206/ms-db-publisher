@@ -2,6 +2,12 @@
 
 The famous game since the early days of Microsoft where you have to flag the cells with mine while opening the cells with value and get the highest score possible.
 
+### Learning outcomes
+- Subscribe to a Kafka topic.
+- Read messages from the Kafka cluster.
+- Interact with Mongo DB Atlas database using multiple requests.
+- Interact with microservices using http requests.
+
 ### Microservices Ecosystem
 This repository is part of a larger ecosystem of microservices each serving it's purpose in bring Minesweeper to life.
 
